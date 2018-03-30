@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            window.didload = 0;
+            window.didpost = 0;
+            window.onload = function() {
+                window.didload = 1;
+                if (window.didpost == 1)
+                    window.stage2();
+            }
+            window.postExpl = function() {
+                window.didpost = 1;
+                if (window.didload == 1)
+                    window.stage2();
+            }
+        </script>
+        <script src="./rop.js"></script>
+        <script src="./kernel.js"></script>	
+        <script src="./loader.js"></script>
+        <script src="./syscalls.js"></script>
+        <script src="./userland.js"></script>		
+        <pre id="console"></pre>
+    </body>
+</html>
+
